@@ -4,6 +4,7 @@
 		<title>Travel Thee Universe</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="./js/one__page_website.js" defer></script>
 	</head>
 	<body>
 		<section>
@@ -18,7 +19,11 @@
 				<a href="#news3"><li>NEWS 3</li></a>
 			</ul>
 		</nav>
-		
+	
+
+		<p id="lb-init" onclick="openModal()">CLICK HERE TO SEE LIGHTBOX</p>
+
+
 		<!-- News Articles -->
 		<div>
 			<section>
@@ -54,6 +59,45 @@
 			</section>
 		</div>
 		<!-- END News Articles -->
+
+		<!-- LightBox -->
+		<div id="LightBox" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="lb-content">
+			
+				<div class="LB-Slides">
+					<div class="numbertext">1 / 4</div>
+					<img src="./images/lb/lb_1.png" style="width:100%">
+				</div>
+			
+				<div class="LB-Slides">
+					<div class="numbertext">2 / 4</div>
+					<img src="./images/lb/lb_2.png" style="width:100%">
+				</div>
+			
+				<div class="LB-Slides">
+					<div class="numbertext">3 / 4</div>
+					<img src="./images/lb/lb_3.png" style="width:100%">
+				</div>
+			
+				<!-- Next/previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		  
+				<!-- Thumbnail image controls -->
+				<div class="thumb-control">
+					<div class="thumb">
+						<img class="thumb-btn" src="./images/lb/lb_thumb_1.png" onclick="currentSlide(1)" alt="Nature">
+					</div>
+					<div class="thumb">
+						<img class="thumb-btn" src="./images/lb/lb_thumb_2.png" onclick="currentSlide(2)" alt="Snow">
+					</div>
+					<div class="thumb">
+						<img class="thumb-btn" src="./images/lb/lb_thumb_3.png" onclick="currentSlide(3)" alt="Mountains">
+					</div>
+				</div>
+			</div>
+		</div>
 		
 		<div>
 			<h1>If you need some help deciding where to go, check out this video.</h1>
